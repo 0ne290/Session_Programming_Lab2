@@ -17,6 +17,9 @@ internal static class Program
         {
             Console.WriteLine("Path to book file is invalid.");
             
+            Console.Write("To terminate the program, press any key...");
+            Console.ReadKey();
+            
             return;
         }
         
@@ -31,6 +34,9 @@ internal static class Program
         catch (Exception e)
         {
             Console.WriteLine(e.Message);
+            
+            Console.Write("To terminate the program, press any key...");
+            Console.ReadKey();
 
             return;
         }
@@ -40,5 +46,8 @@ internal static class Program
         }
         
         Console.WriteLine($"Book:\n\t{book?.ToString() ?? "does not exists"}.");
+        
+        Console.Write("To terminate the program, press any key...");
+        Console.ReadKey();
     }
 }
